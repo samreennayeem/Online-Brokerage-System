@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Search</title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h3>Search for a Stock details</h3>
+                 
+            <p>Enter the symbol of the stock:<br></br>
+                <h:inputText id="inputsymbol" required ="true" 
+                             requiredMessage="The field cannot be empty"
+                        title="Enter your Social Symbol"
+                        value="#{brokerageSystem.inputsymbol}">
+                       
+                </h:inputText>
+            </p>
+             <p>
+                <h:commandButton id="submit" value="Submit"
+                                 action="displaysearch.xhtml" />
+            </p>
+        </h:form>
+    </h:body>
+</html>
+

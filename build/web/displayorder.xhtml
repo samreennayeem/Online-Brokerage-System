@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>Display Orders</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+     <h:body>
+        <h:form>
+           <h3>
+                Display Order Results:
+            </h3>
+            <p>#{brokerageSystem.DisplayOrder()}</p>
+            <h:dataTable value="#{brokerageSystem.List}" var ="i" class="table table-bordered" border="1" cellpadding="5px" 
+                         style="border-collapse: collapse">
+                
+                <h:column>
+                    <f:facet name="header"> Stock Symbol </f:facet>
+                    #{i.symbol}
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Stock Name </f:facet>
+                    #{i.stockname}
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Order Price </f:facet>
+                    $ #{i.orderPrice}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header"> Order Quantity   </f:facet>
+                  #{i.orderQuantity}
+                </h:column>                
+            </h:dataTable>
+            <p>
+                <h:commandButton id="Menu" value="Menu"
+                                 action="menu.xhtml" />
+            </p>
+            <p>
+                <h:commandButton id="return" value="Home"
+                                 action="index.xhtml" />
+            </p>
+        </h:form>
+         
+        
+    </h:body>
+</html>
+
+

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Register</title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+
+    </h:head>
+    <h:body>
+       
+        <h:form>
+            <h3>Log in to your account</h3>
+            <p>Please enter your ID:<br></br>
+                <h:inputText id="id" required ="true" 
+                             requiredMessage="The ID field cannot be empty"
+                        title="Please enter your ID"
+                        value="#{brokerageSystem.id}">
+                        
+                </h:inputText>
+            </p>
+            
+            <p>Please enter your Password:<br></br>
+                <h:inputText id="password" required ="true" 
+                          requiredMessage="The password field cannot be empty"
+                        title="Please enter your password"
+                        value="#{brokerageSystem.pswd}">
+                        
+                </h:inputText>
+            </p>
+            
+             <p>
+                <h:commandButton id="submit" value="Submit"
+                                 action="confirmation2.xhtml" />
+            </p>
+            
+             <p> For Password Retrieval:<br></br>
+                <h:link outcome="passwordreterival.xhtml">
+                    Forgot your Password
+                </h:link>
+             </p>
+        </h:form>
+    </h:body>
+</html>
+

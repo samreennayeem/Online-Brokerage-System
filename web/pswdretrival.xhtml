@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Password Retrival</title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p>Your id is #{brokerageSystem.id}</p>
+            <div><h2>#{brokerageSystem.QuestionRetrieval()}</h2></div>
+            
+             
+       
+                <p>Please enter your answer:<br></br>
+                      
+                <h:inputText id="userans" required ="true" 
+                          requiredMessage="The password field cannot be empty"
+                        title="Please enter your password"
+                        value="#{brokerageSystem.userans}">
+                        
+                </h:inputText>
+            </p>
+                       <p>
+                <h:commandButton id="submit" value="Submit"
+                                 action="pswdretrival2.xhtml" />
+        </p>
+        </h:form>
+    </h:body>
+</html>
+

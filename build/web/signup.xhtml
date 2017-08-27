@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Sign Up</title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+
+    </h:head>
+    <h:body>
+       
+        <h:form>
+            <h3>Create a new account !!</h3>
+                 
+            <p>Enter your Social Security Number:<br></br>
+                <h:inputText id="ssn" required ="true" 
+                             requiredMessage="The SSN field cannot be empty"
+                        title="Enter your Social Security Number"
+                        value="#{brokerageSystem.ssn}"
+                        validatorMessage="Pleause use a correct format 
+                        for your social security number">
+                    <f:validateLength maximum="5" minimum="3" />
+                </h:inputText>
+            </p>
+            
+            <p>Enter your Name:<br></br>
+                <h:inputText id="name" required ="true" 
+                             requiredMessage="The SSN field cannot be empty"
+                        title="Enter your Name"
+                        value="#{brokerageSystem.name}"
+                        validatorMessage="Please use a correct format 
+                        for your name">
+                    <f:validateLength maximum="10" minimum="3" />
+                </h:inputText>
+            </p>
+            
+            <p>Enter your ID:<br></br>
+                <h:inputText id="id" required ="true" 
+                             requiredMessage="The ID field cannot be empty"
+                        title="Enter your ID"
+                        value="#{brokerageSystem.id}"
+                        validatorMessage="The length of your selected 
+                        ID must be between 3 and 20.">
+                    <f:validateLength maximum="20" minimum="3" />
+                </h:inputText>
+            </p>
+            
+            <p>Enter your Password:<br></br>
+                <h:inputText id="password" required ="true" 
+                          requiredMessage="The password field cannot be empty"
+                        title="Enter your password"
+                        value="#{brokerageSystem.pswd}"
+                        validatorMessage="The length of your 
+                        password must be between 3 and 20.">
+                    <f:validateLength maximum="20" minimum="3" />
+                </h:inputText>
+            </p>
+            
+            <p>Enter security questions:<br></br>
+                <h:selectOneMenu id ="question1" value="#{brokerageSystem.question1}" style="width: 150px" title="Please select your security question">
+                    <f:selectItem itemValue="color" itemLabel="color"></f:selectItem>
+                     <f:selectItem itemValue="food" itemLabel="food"></f:selectItem>
+                      <f:selectItem itemValue="movie" itemLabel="movie"></f:selectItem>
+                       <f:selectItem itemValue="animal" itemLabel="animal"></f:selectItem>
+                        <f:selectItem itemValue="zodiac" itemLabel="zodiac"></f:selectItem>
+            </h:selectOneMenu>
+            </p>
+            
+            <p>Enter your answer<br></br>
+              <h:inputText id="answer1" required ="true" 
+                          requiredMessage="The password field cannot be empty"
+                        title="Enter your answer"
+                        value="#{brokerageSystem.answer1}">
+                </h:inputText>  
+            </p>
+            
+            
+             <p>Enter security questions:<br></br>
+                <h:selectOneMenu id ="question2" value="#{brokerageSystem.question2}" style="width: 150px" title="Please select your security question">
+                    <f:selectItem itemValue="color" itemLabel="color"></f:selectItem>
+                     <f:selectItem itemValue="food" itemLabel="food"></f:selectItem>
+                      <f:selectItem itemValue="movie" itemLabel="movie"></f:selectItem>
+                       <f:selectItem itemValue="animal" itemLabel="animal"></f:selectItem>
+                        <f:selectItem itemValue="zodiac" itemLabel="zodiac"></f:selectItem>
+            </h:selectOneMenu>
+            </p>
+            
+            <p>Enter your answer<br></br>
+              <h:inputText id="answer2" required ="true" 
+                          requiredMessage="The password field cannot be empty"
+                        title="Enter your answer"
+                        value="#{brokerageSystem.answer2}">
+                </h:inputText>  
+            </p>
+            
+            
+            <p>
+                <h:commandButton id="submit" value="Submit"
+                                 action="confirmation1.xhtml" />
+            </p>
+
+        </h:form>
+        
+    </h:body>
+</html>
